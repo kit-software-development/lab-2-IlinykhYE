@@ -1,4 +1,5 @@
 ﻿using Practice.HR;
+using System;
 
 namespace Practice
 {
@@ -18,19 +19,25 @@ namespace Practice
                 .Name("Иванов", "Иван", "Иванович") 
                 .Discount(.1f)
                 .Build();
-
             IEmployee employee = Builders.EmployeeBuilder()
                 .Name("Сидоров", "Григорий", "Петрович")
                 .Department("Бухгалтерия")
                 .Build();
-
             /*
              * TODO #8: Собрать приложение. 
              */
-
             /*
              * TODO #9: При помощи отладчика проверить типы и структуру объектов, адресованных переменными client и employee.
              */
+            Console.WriteLine(client.GetType());
+            Console.WriteLine(client.Name.FullName);
+            Console.WriteLine(client.Name.ShortName);
+
+            Console.WriteLine("_________________________________________");
+
+            Console.WriteLine(employee.GetType());
+            Console.WriteLine(employee.Name.FullName);
+            Console.WriteLine(employee.Name.ShortName);
         }
     }
 }
